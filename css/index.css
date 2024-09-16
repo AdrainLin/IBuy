@@ -1,0 +1,527 @@
+/* #region基礎設置 start*/
+:root { 
+    --primary-color-orange: #efd196;  
+    --primary-color-red: #C11205;
+    --secondary-color-100: #F4F4F4;
+    --secondary-color-200: #ECECEC; 
+    --secondary-color-300: #D9D9D9;
+    --secondary-color-400: #666; 
+  }
+.container {
+    width: 1195px;
+    margin: 0 auto;
+}
+.inner-container {
+    width: fit-content;
+    margin: 0 auto;
+}
+/* #endregion基礎設置 */
+
+/* #region頂部導覽列 start */
+
+.topbar {
+    background-color: var(--secondary-color-200);
+    height: 30px;
+}
+.topbar > .container {
+    background-color: var(--secondary-color-200);
+}
+/* 頂部-左側歡迎區 */
+.topbar-welcome {
+    font-size: 0;
+    height: 30px;
+    color: var(--deep-gray);
+}
+.topbar-welcome > span,
+.topbar-welcome > a{
+    font-size: 16px;
+    line-height: 30px;
+}
+.welcome-text {
+    margin-right: 28px;
+}
+.topbar-welcome > .login {
+    padding: 0 15px;
+    border-right: 1px solid var(--secondary-color-400);
+}
+.topbar-welcome > .register {
+    padding: 0 10px;
+}
+/* 頂部-右側導覽區 */
+.topbar-list li{
+    float: left;
+    line-height: 30px;
+}
+.topbar-list a {
+    padding: 0 15px;
+    border-right: 1px solid var(--secondary-color-400);
+}
+.topbar-list li:last-of-type > a {
+    border: 0;
+    padding-right: 0;
+}
+.topbar-list li:first-child a {
+    padding-left: 0;
+}
+/* #endregion頂部導覽列 end */
+
+/* #region頁首 start */
+header {
+    height: 120px;
+}
+.logo img {
+    height: 120px;
+    width: 120px;
+    vertical-align: bottom;
+}
+header .search form{
+    margin-top: 42px;
+    font-size: 0;
+}
+header .search input {
+    width: 508px;
+    height: 34px;
+    padding-top: 0;
+    padding-bottom: 0;
+    border: 1px solid var(--primary-color-red);
+}
+header .search button {
+    width: 80px;
+    height: 36px;
+    border: 0;
+    vertical-align: top;
+    background-color: var(--primary-color-red);
+    background-image: url(../imgs/icons8-search-24.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}   
+/* #endregion頁首 start */
+
+/* #region主導覽列 start*/
+.main-nav {
+    height: 48px;
+    border-bottom: 1px solid var(--primary-color-red);
+}
+.main-nav .all-types {
+    width: 190px;
+    height: 48px;
+    background-color: var(--primary-color-red);
+    color: white;
+    text-align: center;
+    line-height: 48px;
+    font-size: 16px;
+}
+.main-nav-list {
+    height: 48px;
+    line-height: 48px;
+}
+.main-nav-list li {
+    float: left;
+    margin: 0 10px;
+    font-size: 16px;
+}
+/* #endregion主導覽列 end*/
+
+/* #region主內容 start*/
+.main-content {
+    margin-top: 10px;
+}
+.main-content .side-nav {
+    width: 190px;
+    height: 458px;
+    background-color: var(--secondary-color-100);
+    position: relative;
+}
+.main-content .side-nav li {
+    font-size: 14px;
+    line-height: 28px;
+    height: 28px;
+    padding-left: 16px;
+}
+.main-content .side-nav li:hover {
+    background-color: var(--primary-color-red);     
+}
+.main-content .side-nav li:hover .inner-menu{
+    display: block;    
+}
+.main-content .side-nav li:hover > a{
+    color: white; 
+}
+.main-content .inner-menu {
+    width: 680px;
+    height: 458px;
+    background-color: var(--secondary-color-100);
+    position: absolute;
+    top: 0;
+    left: 190px;
+    display: none;
+    padding-left: 20px;
+    z-index: 5;
+}
+.side-nav .inner-menu dl{
+    height: 36px;
+    line-height: 36px;
+}
+.side-nav .inner-menu dl:first-child{
+    margin-top: 10px;
+}
+.side-nav .inner-menu dt, 
+.side-nav .inner-menu dd {
+    float: left;
+}
+.side-nav .inner-menu dt {
+    width: 70px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.side-nav .inner-menu dd a {
+    padding: 0 10px;
+    border-left: 1px solid var(--secondary-color-400);
+}
+.main-content .banner {
+    width: 690px;
+    height: 458px;
+    margin: 0 10px;
+    position: relative;
+}
+.main-content .banner img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+}
+.banner-title,.banner-subtitle {
+    position: absolute;
+    background-color: rgba(238, 237, 231, 0.4);
+    color: #767456;
+}
+.banner-title {
+    font-size: 45px;
+    left: 90px;
+    top: 50px;
+    padding: 15px;
+}
+.banner-subtitle {
+    font-size: 38px;
+    left: 145px;
+    top: 112px;
+    padding: 15px;
+}
+.main-content .side-other {
+    width: 290px;
+    height: 458px;
+}
+.side-other .news {
+    width: 260px;
+    height: 156px;
+    border: 1px solid var(--secondary-color-300);
+    padding: 0 14px;
+}
+.side-other .news .title {
+    height: 38px;
+    line-height: 38px;
+    border-bottom: 1px solid var(--secondary-color-300);
+}
+.side-other .news .title span {
+    font-size: 14px;
+}
+.side-other .news .title a {
+    font-size: 12px;
+}
+.side-other .news-list li {
+    height: 26px;
+    line-height: 26px;
+    font-size: 14px;
+}
+.side-other .other-nav {
+    width: 290px;
+    height: 290px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+.other-nav-list:first-child {
+    margin-top: 16px;
+}
+.other-nav-list li{
+   width:48px;
+   height: 70px;
+   float: left;
+   margin: 0 11px;
+   text-align: center;
+   cursor: pointer;
+}
+.other-nav-list .mid-row {
+    margin-top: 17px;
+    margin-bottom: 17px;
+}
+.other-nav-list li:nth-child(4n+1) {
+    margin-left: 16px;
+}
+/* #endregion主內容 end*/
+
+/* #region秒殺商品區 start*/
+.seckill {
+    margin-top: 10px;
+}
+.seckill .seckill-item{
+    width: 239px;
+    height: 190px;
+    float: left;
+    margin-right: 11px;
+    cursor: pointer;
+    text-align: center;
+}
+.seckill-item:last-child {
+    margin-right: 0;
+    background-color:var(--primary-color-orange);
+}
+.seckill-item:first-child {
+    width: 190px;
+    background-color: var(--primary-color-red);
+    color: white;
+    font-size: 28px;
+    text-align: center;
+}
+.seckill-item:first-child div{
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+.seckill-item:nth-child(2){
+    background-image: radial-gradient(#fff,#D0DAE1);
+}
+.seckill-item:nth-child(3){
+    background-image: radial-gradient(#fff,#DED8CA);
+}
+.seckill-item:nth-child(4){
+    background-image: radial-gradient(#fff,#CFD2DF);
+}
+.seckill-item .sk-item-title {
+    color: #666;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.seckill-item .sk-item-subtitle {
+    font-size: 1.3em;
+    font-weight: 700;
+} 
+.seckill-item:not(:first-child) img{
+    width: 123px;
+    margin-top: 10px;
+}
+.seckill-item:last-child{
+    font-size: 0;
+    line-height: 190px;
+}
+.seckill-item:last-child img{
+    vertical-align: middle;
+}
+/* #endregion秒殺商品區 end*/
+
+/* #region商品樓層*/
+.floor {
+    margin-top: 48px;
+}
+.floor-title {
+    font-size: 20px;
+}
+.floor-nav {
+    height: 30px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid var(--primary-color-red);
+    line-height: 30px;
+}
+.floor-nav-list li {
+    float: left;
+    font-size: 14px;
+}
+.floor-nav-list li a {
+    padding: 0 10px;
+    border-right: 1px solid var(--secondary-color-400);
+}
+.floor-nav-list li:first-child a {
+    padding-left: 0;
+}
+.floor-nav-list li:last-child a {
+    border-right: 0;
+    padding-right: 0;
+}
+.floor-item {
+    float: left;
+}
+.floor-item a {
+    display: block;
+}
+.fitem1 {
+    width: 190px;
+    height: 392px;
+    background-color: var(--secondary-color-100);
+    padding: 20px;
+    text-align: center;
+}
+.fitem1-list li{
+    width: 90px;
+    height: 22px;
+    padding-bottom: 3.5px;
+    border-bottom: 1px solid var(--secondary-color-300);
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+}
+.fitem1-list li:nth-child(2n+1) {
+    float: left;
+}
+.fitem1-list li:nth-child(2n) {
+    float: right;
+}
+.fitem1-list li:nth-child(3),
+.fitem1-list li:nth-child(4){
+    margin: 14.4px 0;
+}
+.top-sell-title,
+.top-sell-subtitle {  
+    color: var(--primary-color-red);
+    font-weight:600;
+}
+.top-sell-title {
+    margin-top: 30px;
+    font-size: 1.8em;
+}
+.top-sell-subtitle {
+    margin-top: 15px;
+    font-size: 1.4em;
+}
+.fitem1 img{
+    width: 160px;    
+}
+.fitem2 {
+    width: 340px;
+    height: 432px;
+    background-color: #E4D3E0;
+    text-align: center;
+}
+.fitem2 img {
+    width: 220px;
+    margin-top: 30px;
+}
+.fitem2 .title {
+    color:#A05EA6 ;
+    font-weight: bold;
+    font-size: 42px;
+    margin: 30px 0 15px 0;
+}
+.fitem2 .subtitle {
+    font-size: 30px;
+    color: #666;
+}
+.fitem3,.fitem4,.fitem5  {
+    width: 205px;
+    height: 431px;
+    border-right: 1px solid var(--secondary-color-200);
+}
+.fitem5 {
+    width: 206px;
+    border-right: 0;
+}
+.fitem3 img,
+.fitem5 img {
+    width: 130px;
+    vertical-align: bottom;
+    margin-top: 15px;
+}
+.fitem3 .card,
+.fitem5 .card {
+    overflow: hidden;   
+    height: 215px;
+    text-align: center;
+    border-bottom: 1px solid var(--secondary-color-200);
+}
+.fitem3 .title,
+.fitem3 .subtitle,
+.fitem5 .title,
+.fitem5 .subtitle {
+    text-align: start;
+    padding-left: 15px;
+}
+.fitem3 .title,
+.fitem5 .title {
+    margin-top: 15px;
+    font-size: 20px;
+    color: black;
+}
+.fitem3 .subtitle,
+.fitem5 .subtitle {
+    margin-top: 10px;
+    color: var(--primary-color-red);
+}
+.fitem4 {
+    text-align: center;
+    border-bottom: 1px solid var(--secondary-color-200);
+}
+.fitem4 .title {
+    font-size: 32px;
+    color: var(--secondary-color-400);
+    margin: 30px 0 10px 0;  
+}
+.fitem4 .subtitle {
+    font-size: 20px;
+    color: #DB7226;
+}
+.fitem4 img {
+    width: 160px;
+    margin-top: 24px;
+}
+/* #endregion商品樓層*/
+
+/* #region頁尾 */
+footer ,footer .container{
+    height: 400px;
+    background-color: #483E3E;
+    margin-top: 48px; 
+}
+footer .links-list {
+    float: left;
+    height: 176px;
+    width: 190px;
+    margin-top: 48px;
+    margin-right: 10px;
+}
+footer .links-list:last-child {
+    margin-right: 0;
+}
+footer .links-list a {
+    color: white;
+    font-size: 14px;
+    line-height: 2;
+} 
+footer .line {
+    height: 1px;
+    background-color: #584D4D;
+    margin-top: 22px;
+}
+footer .bottom-links {
+    text-align: center;
+    margin-top: 47px;
+}
+footer .bottom-links-list {
+    display: inline-block;
+}
+footer .bottom-links-list li {
+    float: left;
+}
+footer .bottom-links-list a{
+    padding: 0 26px;
+    border-right: 1px solid white;
+    color: white;
+}
+footer .bottom-links-list li:last-child a{
+    border-right: 0;
+    padding-right: 0;
+}
+footer .bottom-links-list li:first-child a {
+    padding-left: 0;
+}
+
+.copyright {
+   margin-top: 10px;
+   color: white; 
+}
+/* #endregion頁尾 */
